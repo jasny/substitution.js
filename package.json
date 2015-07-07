@@ -1,0 +1,19 @@
+{
+  "name": "substitute",
+  "version": "0.1.0",
+  "author": "Arnold Daniels <arnold@jasny.net>",
+  "description": "recursively substitute placeholders",
+  "main": "./substitute.js",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/legalthings/substitute.js.git"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "deepcopy": "~0.5.0"
+  }
+}

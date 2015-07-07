@@ -1,0 +1,32 @@
+{
+  "name": "substitute",
+  "main": "substitute.js",
+  "version": "0.1.0",
+  "homepage": "http://github.com/legalthings/substitute.js",
+  "authors": [
+    "Arnold Daniels <arnold@jasny.net>"
+  ],
+  "description": "recursively substitute placeholders",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "substition",
+    "string",
+    "templates",
+    "placeholders"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec",
+    "**/*.spec.js"
+  ],
+  "dependencies": {
+    "deepcopy": "~0.5.0"
+  }
+}

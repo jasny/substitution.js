@@ -1,5 +1,5 @@
 # substitute.js
-JavaScript library to replace placeholders in a string, possibly through a callback.
+JavaScript library to recursively substitute placeholders, possibly through a callback.
 
 The library is intended for substituting placeholders in small strings. It will recursively replace all strings in an
 object or array. When a callback is provided as replacement, it will only be called if the placeholder is used.
@@ -21,7 +21,7 @@ Works in node.js or in the browser (optional AMD support).
 ## Usage
 
 ```js
-var substitute = require('substitute'); // Node.js
+var substitute = require('substitute'); // Node.js / AMD
 
 var rawObject = {
   link: 'http://{domain}',
