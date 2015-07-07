@@ -1,6 +1,6 @@
 {
   "name": "substitution",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Arnold Daniels <arnold@jasny.net>",
   "description": "recursively substitute placeholders",
   "main": "./substitution.js",
