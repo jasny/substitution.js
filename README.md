@@ -1,4 +1,6 @@
 # substitute.js
+[![Build Status](https://travis-ci.org/jasny/substitute.js.svg?branch=master)](https://travis-ci.org/jasny/substitute.js)
+
 JavaScript library to recursively substitute placeholders, possibly through a callback.
 
 The library is intended for substituting placeholders in small strings. It will recursively replace all strings in an
