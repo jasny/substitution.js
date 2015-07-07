@@ -1,4 +1,4 @@
-var substitute = require('./substitute');
+var substitute = require('./substitution');
 
 describe('substitute()', function() {
   describe('substitute a single placeholder', function () {

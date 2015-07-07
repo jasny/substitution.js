@@ -1,7 +1,7 @@
 {
-  "name": "substitute",
-  "main": "substitute.js",
-  "homepage": "http://github.com/jasny/substitute.js",
+  "name": "substitution",
+  "main": "substitution.js",
+  "homepage": "http://github.com/jasny/substitution.js",
   "authors": [
     "Arnold Daniels <arnold@jasny.net>"
   ],

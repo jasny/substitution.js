@@ -1,5 +1,5 @@
-# substitute.js
-[![Build Status](https://travis-ci.org/jasny/substitute.js.svg?branch=master)](https://travis-ci.org/jasny/substitute.js)
+# substitution.js
+[![Build Status](https://travis-ci.org/jasny/substitution.js.svg?branch=master)](https://travis-ci.org/jasny/substitution.js)
 
 JavaScript library to recursively substitute placeholders, possibly through a callback.
 
@@ -13,17 +13,17 @@ Works in node.js or in the browser (optional AMD support).
 
 #### npm
 
-    npm install substitute --save
+    npm install substitution --save
    
 #### bower
 
-    bower install substitute --save
+    bower install substitution --save
     
    
 ## Usage
 
 ```js
-var substitute = require('substitute'); // Node.js / AMD
+var substitute = require('substitution'); // Node.js / AMD
 
 var rawObject = {
   link: 'http://{domain}',

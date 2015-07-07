@@ -1,14 +1,14 @@
 {
-  "name": "substitute",
+  "name": "substitution",
   "version": "0.1.0",
   "author": "Arnold Daniels <arnold@jasny.net>",
   "description": "recursively substitute placeholders",
-  "main": "./substitute.js",
+  "main": "./substitution.js",
   "license": "MIT",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jasny/substitute.js.git"
+    "url": "git://github.com/jasny/substitution.js.git"
   },
   "scripts": {
     "test": "jasmine"
