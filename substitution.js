@@ -131,7 +131,7 @@
    */
   function isEmpty(object) {
     for (var placeholder in object) {
-      if (subject.hasOwnProperty(object)) return false;
+      if (object.hasOwnProperty(placeholder)) return false;
     }
     return true;
   }

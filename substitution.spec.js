@@ -1,7 +1,7 @@
 var substitute = require('./substitution');
 
-describe('substitute()', function() {
-  describe('substitute a single placeholder', function () {
+describe('substitute', function() {
+  describe('a single placeholder', function () {
     it('works for a string', function (done) {
       var subject = '{foo} zoo';
       
@@ -73,7 +73,7 @@ describe('substitute()', function() {
     });
   });
   
-  describe('substitute multiple placeholders', function () {    
+  describe('multiple placeholders', function () {    
     it('works for a string as subject', function (done) {
       substitute('{foo} zoo {bar}', {foo: 'crazy', bar: 'life'}, function(err, value) {
         if (!err) expect(value).toEqual('crazy zoo life');
@@ -143,10 +143,10 @@ describe('substitute()', function() {
     });
   });
   
-  describe('substitute a placeholder using a callback', function () {
+  describe('a placeholder using a callback', function () {
     var fn = function(callback) {
       callback(null, 'crazy');
-    }
+    };
   
     it('works for a string', function (done) {
       var subject = '{foo} zoo';
@@ -215,6 +215,34 @@ describe('substitute()', function() {
           ]
         });
         done(err);
+      });
+    });
+  });
+  
+  describe('using a callback with an error', function () {
+    var foo = function(callback) {
+      callback(null, 'crazy');
+    };
+    var bar = function(callback) {
+      callback('bar is closed');
+    };
+    var zoo = function(callback) {
+      callback('monkey error');
+    };
+    
+    it('works with a single error', function (done) {
+      substitute('{bar}', {bar: bar}, function(err, value) {
+        expect(err, ['bar is closed']);
+        expect(value, '{bar}');
+        done();
+      });
+    });
+    
+    it('works with multiple errors and a success', function (done) {
+      substitute('{foo} {bar} {zoo}', {foo: foo, bar: bar, zoo: zoo}, function(err, value) {
+        expect(err, ['bar is closed', 'monkey error']);
+        expect(value, 'crazy {bar} {zoo}');
+        done();
       });
     });
   });
