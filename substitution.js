@@ -42,7 +42,7 @@
 
     for (var placeholder in replacements) {
       if (!replacements.hasOwnProperty(placeholder)) continue;
-            
+      
       if (typeof replacements[placeholder] === 'function') {
         if (!hasPlaceholder(copy, placeholder)) {
           delete replacements[placeholder];
@@ -78,7 +78,7 @@
     var queue = [],
         next = subject;
     
-    while (next) {
+    while (typeof next !== 'undefined') {
       if (typeof next === 'string') {
         if (next.match(placeholder)) return true; // Found
       } else if (Object.prototype.toString.call(next) === '[object Array]') {
@@ -87,7 +87,7 @@
         }
       } else if (typeof next === 'object') { 
         for (var key in next) {
-          if (!next.hasOwnProperty(key)) continue;
+          if (!next.hasOwnProperty(key) || typeof next[key] === 'undefined') continue;
           queue.push(next[key]);
         }
       }

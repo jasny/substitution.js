@@ -190,6 +190,25 @@ describe('substitute', function() {
         done(err);
       });
     });
+
+    it('works for an object with undefined', function (done) {
+      var subject = {
+        x: undefined,
+        a: '{foo} zoo',
+        b: 'cool foo',
+        c: 'not so {foo} anymore'
+      };
+      
+      substitute(subject, {foo: fn}, function(err, value) {
+        if (!err) expect(value).toEqual({
+          x: undefined,
+          a: 'crazy zoo',
+          b: 'cool foo',
+          c: 'not so crazy anymore'
+        });
+        done(err);
+      });
+    });
     
     it('works for a complex structure', function (done) {
       var subject = {
